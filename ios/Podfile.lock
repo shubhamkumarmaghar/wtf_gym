@@ -1,0 +1,47 @@
+PODS:
+  - Flutter (1.0.0)
+  - geocoder (0.0.1):
+    - Flutter
+  - geolocator_apple (1.2.0):
+    - Flutter
+  - location (0.0.1):
+    - Flutter
+  - permission_handler_apple (9.0.4):
+    - Flutter
+  - shared_preferences_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - geocoder (from `.symlinks/plugins/geocoder/ios`)
+  - geolocator_apple (from `.symlinks/plugins/geolocator_apple/ios`)
+  - location (from `.symlinks/plugins/location/ios`)
+  - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
+  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  geocoder:
+    :path: ".symlinks/plugins/geocoder/ios"
+  geolocator_apple:
+    :path: ".symlinks/plugins/geolocator_apple/ios"
+  location:
+    :path: ".symlinks/plugins/location/ios"
+  permission_handler_apple:
+    :path: ".symlinks/plugins/permission_handler_apple/ios"
+  shared_preferences_foundation:
+    :path: ".symlinks/plugins/shared_preferences_foundation/ios"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  geocoder: 3cfab70531a0b367e917bafe82df4c30f6d4c45a
+  geolocator_apple: cc556e6844d508c95df1e87e3ea6fa4e58c50401
+  location: 3a2eed4dd2fab25e7b7baf2a9efefe82b512d740
+  permission_handler_apple: 44366e37eaf29454a1e7b1b7d736c2cceaeb17ce
+  shared_preferences_foundation: e2dae3258e06f44cc55f49d42024fd8dd03c590c
+
+PODFILE CHECKSUM: d0869897fbef05f975bd8cda429b905e09e52b0c
+
+COCOAPODS: 1.12.1
