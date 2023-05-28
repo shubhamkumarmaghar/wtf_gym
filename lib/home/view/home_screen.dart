@@ -34,17 +34,25 @@ class _HomeScreenState extends State<HomeScreen> {
   late HomeViewModel _homeViewModel;
 
   @override
+  @override
   void initState() {
     super.initState();
     _homeViewModel = Provider.of<HomeViewModel>(context, listen: false);
-    requestPermission().then((value) {
-
-      _homeViewModel.getGymDetails(page: pageCount, limit: pageSize, lat: value?.latitude ?? 28.6190347, lang: value?.longitude ?? 77.0640016);
-
-      //_homeViewModel.getGymDetails(page: pageCount, limit: pageSize, lat:  28.6190347, lang: 77.0640016);
-    });
+    getLocation();
     paging();
 
+  }
+
+  void getLocation()async{
+    var position = await requestPermission();
+    log("${position?.latitude} ---  ${position?.longitude}" );
+    if(position != null){
+      _homeViewModel.getGymDetails(page: pageCount, limit: pageSize, lat:position.latitude ?? 28.6190347, lang:position.longitude ?? 77.0640016);
+    }else{
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text("Unable to fetch location.Please allow it."),
+      ));
+    }
   }
 
 
